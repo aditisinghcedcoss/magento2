@@ -73,7 +73,7 @@ abstract class AbstractSource implements
             }
         }
         // End
-        if (isset($options[$value])) {
+        if (is_null($value) === false  &&  is_array($value) === false && isset($options) && isset($options[$value])) {
             return $options[$value];
         }
         return false;
